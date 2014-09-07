@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="medium-3 columns">
+	
+	  {{#link-to 'user' this.login}}<img {{bind-attr src=avatar_url}}/>{{/link-to}}
+	  
+	  <h4>{{#link-to 'user' this}}{{name}}{{/link-to}}</h4>
+	  
+	  {{company}}<br />
+	  {{location}}<br />
+	  {{email}}<br />
+	  
+	  <hr/>
+
+	   Followers: {{followers}}
+	   Reopsitories: {{public_repos}}
+	   Gists: {{public_gists}}
+
+    {{#link-to "index"}}Back{{/link-to}}
+
+	</div>
+	
+  <div class="medium-8 columns">
+      {{outlet}}
+  </div>
+</div>
+
