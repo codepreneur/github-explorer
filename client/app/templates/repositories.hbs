@@ -1,0 +1,18 @@
+<ol>
+  <li>{{#link-to 'index'}}Devs{{/link-to}}</li>
+  <li>{{#link-to 'user' user}}{{user.name}}{{/link-to}}</li>
+  <li class="active">Repositories</li>
+</ol>
+
+<table>
+    {{#each}}
+    <tr>
+      <td><h4>{{#link-to 'repository' this.name}}{{name}}{{/link-to}}</h4></td>
+      <td>
+
+        {{description}}
+
+      </td>
+    </tr>
+    {{/each}}
+</table>
