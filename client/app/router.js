@@ -7,8 +7,12 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('user', { path: 'users/:login' });
   this.resource("repositories");
-  this.resource("repository", { path: "repositories/:reponame" });
-  this.route('forks');
+  this.resource("repository", { path: "repositories/:reponame" }, function(){
+  	this.resource("issues");
+    this.resource("forks");
+    this.resource("commits");
+    this.route("newissue");
+  });
 });
 
 export default Router;
