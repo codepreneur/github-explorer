@@ -8,6 +8,7 @@ Router.map(function() {
   this.resource('user', { path: 'users/:login' });
   this.resource("repositories");
   this.resource("repository", { path: "repositories/:reponame" });
+  this.route('forks');
 });
 
 export default Router;

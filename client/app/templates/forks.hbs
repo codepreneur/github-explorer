@@ -1,0 +1,19 @@
+<h4>Forks</h4>
+<table>
+  {{#each}}
+  <tr>
+    <td><img {{bind-attr src=owner.avatar_url}} style="width:120px" /></td>
+    <td>
+        {{full_name}}
+        <hr />
+        <p>{{fromDate created_at}}</p>
+    </td>
+  </tr>
+  {{else}}
+  <tr>
+      <td>
+          <p>No forks yet!</p>
+      </td>
+  </tr>
+  {{/each}}
+</table>
