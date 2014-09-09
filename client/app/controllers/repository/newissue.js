@@ -17,9 +17,10 @@ export default Ember.Controller.extend({
       //    this.transitionToRoute("issues");
       //    alert("Issue submitted");
       //});
+      
       console.log("Submitted " + issue.get("title") + " to " + url);
       //reset it
-      this.set("issue", issue.create());
+      // this.set("issue", issue.create());
       this.transitionToRoute("issues");
     }
   }
