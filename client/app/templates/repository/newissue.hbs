@@ -1,0 +1,11 @@
+ <h3>Create an Issue</h3>
+<div class="form">
+  <label for="title">Title</label><br>
+  {{input value=issue.title placeholder="Title of Issue"}}
+</div>
+<div class="form">
+  <label for="body">Body</label><br>
+  {{textarea value=issue.body placeholder="What's your issue?" rows=5}}
+</div>
+
+<button class="button" {{action "submitIssue"}}>Submit Issue</button>
