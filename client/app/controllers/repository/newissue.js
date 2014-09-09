@@ -3,9 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 	needs: ["repository"],
   repo: Ember.computed.alias("controllers.repository"),
-  issue : function(){
-      return Github.Issue.create();
-  }.property("repo.model"),
+  
   actions: {
     submitIssue: function () {
       //var vals = this.getProperties("title", "body");
@@ -21,7 +19,7 @@ export default Ember.Controller.extend({
       //});
       console.log("Submitted " + issue.get("title") + " to " + url);
       //reset it
-      this.set("issue", Github.Issue.create());
+      this.set("issue", this.get("issue").create());
       this.transitionToRoute("issues");
     }
   }

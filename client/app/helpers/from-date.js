@@ -8,4 +8,4 @@ function fromDate(theDate) {
 
 export { fromDate };
 
-export default Ember.Handlebars.registerBoundHelper(fromDate);
+export default Ember.Handlebars.makeBoundHelper(fromDate);
