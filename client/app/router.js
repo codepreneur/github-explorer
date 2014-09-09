@@ -14,7 +14,6 @@ Router.map(function() {
 	    this.route("newissue");
 	  });  	
   });
-  this.route('repository/newissue');
 });
 
 export default Router;

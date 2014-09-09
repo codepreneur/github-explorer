@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	needs: ["repository"],
+	needs: ["repository","repository/newissue"],
   repo: Ember.computed.alias("controllers.repository"),
-  
+  issue: Ember.computed.alias("controllers.repository/newissue"),
   actions: {
     submitIssue: function () {
       //var vals = this.getProperties("title", "body");
@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
       //});
       console.log("Submitted " + issue.get("title") + " to " + url);
       //reset it
-      this.set("issue", this.get("issue").create());
+      this.set("issue", issue.create());
       this.transitionToRoute("issues");
     }
   }
