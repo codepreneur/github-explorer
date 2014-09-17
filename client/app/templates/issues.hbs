@@ -2,18 +2,18 @@
 <table>
   {{#each}}
     <tr>
-        <td><img {{bind-attr src=user.avatar_url}} style="width:120px" /></td>
-        <td>
-            {{title}}
-            <hr />
-            <p>{{from-date created_at}}</p>
-        </td>
+      <td><img {{bind-attr src=user.avatar_url}} style="width:120px" /></td>
+      <td>
+        {{title}}
+        <hr />
+        <p>{{from-date created_at}}</p>
+      </td>
     </tr>
   {{else}}
     <tr>
-        <td>
-            <p>No issues yet!</p>
-        </td>
+      <td>
+        <p>No issues yet!</p>
+      </td>
     </tr>
   {{/each}}
 </table>
