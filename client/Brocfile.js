@@ -6,7 +6,7 @@ var app = new EmberApp();
 
 app.import('bower_components/modernizr/modernizr.js')
 app.import('bower_components/foundation/js/foundation.min.js')
-app.import('bower_components/moment/min/moment.min.js')
+app.import('bower_components/moment/min/moment.min.js');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
